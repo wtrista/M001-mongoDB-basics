@@ -1,0 +1,8 @@
+## connect with Mongo shell
+mongo "mongodb://sandbox-shard-00-00-miwhh.mongodb.net:27017,sandbox-shard-00-01-miwhh.mongodb.net:27017,sandbox-shard-00-02-miwhh.mongodb.net:27017/test?replicaSet=Sandbox-shard-0" --ssl --authenticationDatabase admin --username m001-student --password m001-mongodb-basics
+
+## load data
+load("loadMovieDetailsDataset.js")
+
+## list db
+show dbs
