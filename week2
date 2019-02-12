@@ -81,3 +81,23 @@ Answer:
 db.movieDetails.find({"awards.nominations":10, "rated": "PG"}).count()
 3
 
+
+lab 2.4 Problem:
+Explore the movieDetails collection that you loaded into your Atlas sandbox cluster and then issue a query to answer the following question. How many movies in the movieDetails collection list "Family" among its genres?
+
+You will find the count() method useful in answering this question using the mongo shell.
+
+Answer:
+db.movieDetails.find({"genres":"Family"}).count()
+124
+
+
+lab 2.5 Problem:
+Explore the movieDetails collection that you loaded into your Atlas sandbox cluster and then issue a query to answer the following question. How many movies in the movieDetails collection list "Western" second among its genres?
+
+You will find the count() method useful in answering this question using the mongo shell.
+
+Answer:
+db.movieDetails.find({"genres.1":"Western"}).count()
+14
+
