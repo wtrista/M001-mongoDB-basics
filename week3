@@ -4,3 +4,18 @@ Using the $in operator, filter the video.movieDetails collection to determine ho
 use video
 db.movieDetails.find({writers: {$in: ["Ethan Coen", "Joel Coen"]}}).count()
 3
+
+
+## Problem:
+Problem:
+Connect to our class Atlas cluster from the mongo shell or Compass and answer the following question. How many documents in the 100YWeatherSmall.data collection do NOT contain the key atmosphericPressureChange.
+
+{atmosphericPressureChange:{$exists:false}}
+40668
+
+
+$$ Problem:
+Connect to our class Atlas cluster from the mongo shell or Compass and view the ships.shipwrecks collection. In this collection, watlev describes the water level at the shipwreck site and depth describes how far below sea level the ship rests. How many documents in the ships.shipwrecks collection match either of the following criteria: watlev equal to "always dry" or depth equal to 0.
+
+{$or:[{watlev:"always dry"}, {depth:0}]}
+2331
