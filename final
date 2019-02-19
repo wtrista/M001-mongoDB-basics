@@ -40,8 +40,32 @@ Answer:
 {"tripduration": null} = 3
 
 
+Final Exam: Question 5
+
+Problem:
+Using the video.movieDetails collection, which of the queries below would produce output documents that resemble the following. Check all that apply.
+
+{ "title" : "P.S. I Love You" }
+{ "title" : "Love Actually" }
+{ "title" : "Shakespeare in Love" }
+NOTE: We are not asking you to consider specifically which documents would be output from the queries below, but rather what fields the output documents would contain.
+
+Answer:
+db.movieDetails.find({}, {title: 1, _id: 0})
+db.movieDetails.find({year: 1964}, {title: 1, _id: 0})
 
 
+Final Exam: Question 6
+
+Problem:
+Please connect to the M001 class Atlas cluster from the mongo shell or Compass and view the video.movies collection. How many movies match the following criteria?
+
+The cast includes either of the following actors: "Jack Nicholson", "John Huston".
+The viewerRating is greater than 7.
+The mpaaRating is "R".
+
+Answer:
+{"viewerRating":{"$gt":7}, "mpaaRating":"R"}
 
 
 
