@@ -65,7 +65,7 @@ The viewerRating is greater than 7.
 The mpaaRating is "R".
 
 Answer:
-{"viewerRating":{"$gt":7}, "mpaaRating":"R"}
+{"viewerRating":{"$gt":7}, "mpaaRating":"R", "cast":{"$in":["Jack Nicholson","John Huston"]}} = 8
 
 
 
